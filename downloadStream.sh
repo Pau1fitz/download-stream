@@ -39,7 +39,7 @@ do
   (
     DIR="${URL##*/}"
     # download all videos
-    for i in $(seq -f "%04g" 0 10)
+    for i in $(seq -f "%04g" 0 1000)
     do
       echo $DIR'-'$i.ts
       wget $URL'-'$i.ts --header "Referer: bxjlp.mcloud.to"
