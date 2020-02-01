@@ -36,14 +36,15 @@ do
   cd $NAME
   (
     DIR="${URL##*/}"
-    for i in $(seq -f "%04g" 0 1000)
+    for i in $(seq -f "%04g" 0 1240)
     do
-      echo $DIR'-'$i.ts
       wget $URL'-'$i.ts --header "Referer: bxjlp.mcloud.to"
       echo $DIR'-'$i.ts
       cat $DIR'-'$i.ts >> $NAME.ts
+      rm $DIR'-'$i.ts
     done
 
-    ffmpeg -i $NAME.ts -acodec copy -vcodec copy $NAME.mp4  
+    ffmpeg -i $NAME.ts -acodec copy -vcodec copy $NAME.mp4
+    rm $NAME.ts
   )
 done
