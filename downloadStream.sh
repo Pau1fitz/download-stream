@@ -19,7 +19,7 @@ is_ffmpgeg_required
 
 if $install_bash
   then
-  echo "Installing ffmpeg...✅"
+  echo "Installing ffmpeg...🍿🎥🎬"
   brew install ffmpeg
   wait
 fi
