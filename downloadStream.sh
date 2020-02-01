@@ -9,15 +9,15 @@ NAME=$1
 
 function is_ffmpgeg_required {
   if brew ls --versions ffmpeg > /dev/null; then
-    install_bash=false
+    install_ffmpeg=false
   else
-    install_bash=true
+    install_ffmpeg=true
   fi
 }
 
 is_ffmpgeg_required
 
-if $install_bash
+if $install_ffmpeg
   then
   echo "Installing ffmpeg...🍿🎥🎬"
   brew install ffmpeg
