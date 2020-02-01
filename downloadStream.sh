@@ -39,7 +39,6 @@ do
     for i in $(seq -f "%04g" 0 1240)
     do
       wget $URL'-'$i.ts --header "Referer: bxjlp.mcloud.to"
-      echo $DIR'-'$i.ts
       cat $DIR'-'$i.ts >> $NAME.ts
     done
     ffmpeg -i $NAME.ts -acodec copy -vcodec copy $NAME.mp4
