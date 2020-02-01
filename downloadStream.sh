@@ -8,7 +8,8 @@ LINK=(
 NAME=$1
 
 function is_ffmpgeg_required {
-  if brew ls --versions ffmpeg > /dev/null; then
+  if brew ls --versions ffmpeg > /dev/null; 
+    then
     install_ffmpeg=false
   else
     install_ffmpeg=true
@@ -19,7 +20,7 @@ is_ffmpgeg_required
 
 if $install_ffmpeg
   then
-  echo "Installing ffmpeg...🍿🎥🎬"
+  echo "Installing ffmpeg...🍿 🎥 🎬"
   brew install ffmpeg
   wait
 fi
@@ -36,7 +37,7 @@ do
   cd $NAME
   (
     DIR="${URL##*/}"
-    for i in $(seq -f "%04g" 0 1240)
+    for i in $(seq -f "%04g" 0 10)
     do
       wget $URL'-'$i.ts --header "Referer: bxjlp.mcloud.to"
       cat $DIR'-'$i.ts >> $NAME.ts
