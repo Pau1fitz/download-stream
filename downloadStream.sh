@@ -41,10 +41,8 @@ do
       wget $URL'-'$i.ts --header "Referer: bxjlp.mcloud.to"
       echo $DIR'-'$i.ts
       cat $DIR'-'$i.ts >> $NAME.ts
-      rm $DIR'-'$i.ts
     done
-
     ffmpeg -i $NAME.ts -acodec copy -vcodec copy $NAME.mp4
-    rm $NAME.ts
+    rm *.ts
   )
 done
