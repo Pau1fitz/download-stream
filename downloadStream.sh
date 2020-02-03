@@ -3,9 +3,10 @@
 # movie/tv show name
 NAME=$1
 
-LINK_URL=$2
+# movie/tv show link
+MOVIE_LINK=$2
 
-LINK=($LINK_URL)
+LINK=($MOVIE_LINK)
 
 function is_ffmpgeg_required {
   if brew ls --versions ffmpeg > /dev/null; 
