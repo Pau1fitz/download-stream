@@ -28,7 +28,7 @@ fi
 if [[ $NAME == "" ]]
  then
  echo "A movie/tv show name must be provided"
- exit 0
+ exit 1
 fi
 
 for URL in ${LINK[@]}
