@@ -8,7 +8,7 @@ MOVIE_LINK=$2
 
 LINK=($MOVIE_LINK)
 
-function is_ffmpgeg_required {
+function is_ffmpeg_required {
   if brew ls --versions ffmpeg > /dev/null; 
     then
     install_ffmpeg=false
@@ -17,7 +17,7 @@ function is_ffmpgeg_required {
   fi
 }
 
-is_ffmpgeg_required
+is_ffmpeg_required
 
 if $install_ffmpeg
   then
