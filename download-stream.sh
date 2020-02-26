@@ -6,6 +6,7 @@ NAME=$1
 # movie/tv show link
 MOVIE_LINK=$2
 
+# set link
 LINK=($MOVIE_LINK)
 
 function is_ffmpeg_required {
